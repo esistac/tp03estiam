@@ -1,5 +1,6 @@
 const http = require('http');
 const { MongoClient } = require('mongodb');
+
 const uri = process.env.COSMOSDB_CONN_STRING || '<your-connection-string>';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const server = http.createServer(async (req, res) => {
